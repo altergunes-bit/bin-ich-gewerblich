@@ -10,6 +10,10 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Invalid email' });
     }
 
+    // Quiz-Ergebnis sicher übernehmen (nur erlaubte Werte)
+    const allowed = ['privat', 'grauzone', 'gewerblich'];
+    const ergebnis = allowed.includes(body.ergebnis) ? body.ergebnis : '';
+
     const r = await fetch('https://api.brevo.com/v3/contacts/doubleOptinConfirmation', {
       method: 'POST',
       headers: {
@@ -22,6 +26,7 @@ export default async function handler(req, res) {
         includeListIds: [Number(process.env.BREVO_LIST_ID)],
         templateId: Number(process.env.BREVO_DOI_TEMPLATE_ID),
         redirectionUrl: 'https://bin-ich-gewerblich.vercel.app/?confirmed=1',
+        attributes: { ERGEBNIS: ergebnis },
       }),
     });
 
