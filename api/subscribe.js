@@ -1,4 +1,4 @@
-// api/subscribe.js — Vercel Serverless Function
+// api/subscribe.js — Vercel Serverless Function (Double-Opt-in via Brevo)
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
@@ -10,7 +10,7 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Invalid email' });
     }
 
-    const r = await fetch('https://api.brevo.com/v3/contacts', {
+    const r = await fetch('https://api.brevo.com/v3/contacts/doubleOptinConfirmation', {
       method: 'POST',
       headers: {
         'accept': 'application/json',
@@ -19,19 +19,17 @@ export default async function handler(req, res) {
       },
       body: JSON.stringify({
         email,
-        listIds: [Number(process.env.BREVO_LIST_ID)],
-        updateEnabled: true,
+        includeListIds: [Number(process.env.BREVO_LIST_ID)],
+        templateId: Number(process.env.BREVO_DOI_TEMPLATE_ID),
+        redirectionUrl: 'https://bin-ich-gewerblich.vercel.app/?confirmed=1',
       }),
     });
 
-    if (r.ok || r.status === 204) {
+    if (r.ok) {
       return res.status(200).json({ ok: true });
     }
     const errText = await r.text();
-    console.error('Brevo error', r.status, errText);
-    if (r.status === 400 && errText.includes('Contact already exist')) {
-      return res.status(200).json({ ok: true });
-    }
+    console.error('Brevo DOI error', r.status, errText);
     return res.status(502).json({ error: 'Brevo error' });
   } catch (e) {
     console.error(e);
