@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bin ich gewerblich? Privat oder gewerblich verkaufen auf Vinted &amp; eBay – Selbsttest</title>
+<meta name="description" content="In 2 Minuten klären: Bist du als Verkäufer auf Vinted, eBay oder Kleinanzeigen noch privat oder schon gewerblich? Kostenloser Selbsttest inklusive DAC7-Hinweis und nächsten Schritten. Keine Steuerberatung." />
+<meta name="robots" content="index, follow" />
+<meta property="og:title" content="Bin ich gewerblich? – Selbsttest für Vinted-, eBay- &amp; Kleinanzeigen-Verkäufer" />
+<meta property="og:description" content="Privat oder gewerblich? In 2 Minuten Klarheit – mit DAC7-Hinweis und konkreten nächsten Schritten." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="de_DE" />
+<style>
+  :root{
+    --bg:#FBFAF7; --surface:#FFFFFF; --ink:#1E2A2E; --ink-soft:#566169; --ink-faint:#8A949A;
+    --brand:#0E5C5A; --brand-dark:#0A4544; --line:#E8E4DB;
+    --privat-bg:#E6F1E9; --privat-fg:#1F6B47;
+    --grau-bg:#FBF0D8; --grau-fg:#94640F;
+    --gewerb-bg:#E7EEF7; --gewerb-fg:#2A538C;
+    --warn-bg:#FBF0D8; --warn-fg:#94640F;
+    --radius:14px; --radius-sm:10px;
+    --shadow:0 1px 2px rgba(30,42,46,.05), 0 8px 28px rgba(30,42,46,.06);
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6; font-size:16px;
+  }
+  .wrap{max-width:640px; margin:0 auto; padding:32px 20px 56px;}
+  .eyebrow{font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--brand); font-weight:600; margin:0 0 10px;}
+  h1{
+    font-family:Georgia,"Iowan Old Style","Times New Roman",serif;
+    font-weight:600; font-size:34px; line-height:1.18; letter-spacing:-.01em; margin:0 0 14px; color:var(--ink);
+  }
+  .lede{font-size:17px; color:var(--ink-soft); margin:0 0 26px;}
+  .lede strong{color:var(--ink); font-weight:600;}
+  .card{
+    background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
+    box-shadow:var(--shadow); padding:24px 22px;
+  }
+  .card-head{display:flex; align-items:center; gap:11px; margin-bottom:4px;}
+  .card-head .mark{
+    width:34px; height:34px; flex:none; border-radius:9px; background:var(--brand);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .card-head .mark svg{width:19px; height:19px; stroke:#fff;}
+  .card-title{font-size:19px; font-weight:600;}
+  #sub{font-size:13px; color:var(--ink-soft); margin:2px 0 18px;}
+  .q{font-size:17px; font-weight:600; line-height:1.45; margin:0 0 14px;}
+  .opt{
+    display:block; width:100%; text-align:left; margin:9px 0; padding:13px 15px;
+    font-size:15px; line-height:1.4; color:var(--ink);
+    background:var(--surface); border:1px solid var(--line); border-radius:var(--radius-sm);
+    cursor:pointer; transition:border-color .12s, background .12s, transform .04s;
+    font-family:inherit;
+  }
+  .opt small{display:block; color:var(--ink-faint); font-size:12.5px; margin-top:3px; font-weight:400;}
+  .opt:hover{border-color:var(--brand); background:#F4FAF9;}
+  .opt:active{transform:translateY(1px);}
+  .ghost{
+    margin-top:8px; padding:7px 10px; font-size:13px; color:var(--ink-soft);
+    background:none; border:none; cursor:pointer; font-family:inherit; display:inline-flex; align-items:center; gap:5px;
+  }
+  .ghost:hover{color:var(--ink);}
+  .ghost svg{width:14px; height:14px; stroke:currentColor;}
+  .intro-p{font-size:15px; color:var(--ink-soft); margin:0 0 16px;}
+  .cta{
+    display:inline-block; width:100%; text-align:center; padding:13px 18px;
+    font-size:15px; font-weight:600; color:#fff; background:var(--brand);
+    border:none; border-radius:var(--radius-sm); cursor:pointer; font-family:inherit;
+    transition:background .12s;
+  }
+  .cta:hover{background:var(--brand-dark);}
+  .badge{display:inline-block; font-size:13px; font-weight:600; padding:6px 13px; border-radius:999px; margin:2px 0 12px;}
+  .badge.privat{background:var(--privat-bg); color:var(--privat-fg);}
+  .badge.grauzone{background:var(--grau-bg); color:var(--grau-fg);}
+  .badge.gewerblich{background:var(--gewerb-bg); color:var(--gewerb-fg);}
+  .result-body{font-size:15.5px; line-height:1.6; margin:0 0 6px;}
+  .reasons-title{font-size:13px; font-weight:600; margin:12px 0 4px;}
+  .reasons-title.p{color:var(--privat-fg);} .reasons-title.g{color:var(--gewerb-fg);}
+  ul.reasons{list-style:none; margin:0 0 4px; padding:0;}
+  ul.reasons li{position:relative; padding-left:18px; font-size:13.5px; color:var(--ink-soft); margin:3px 0; line-height:1.5;}
+  ul.reasons li::before{content:"\00B7"; position:absolute; left:2px; font-weight:700;}
+  ul.reasons.p li::before{color:var(--privat-fg);} ul.reasons.g li::before{color:var(--gewerb-fg);}
+  .mini-note{font-size:12.5px; line-height:1.5; color:var(--ink-soft); margin:9px 0 0;}
+  .callout{border-radius:var(--radius-sm); padding:13px 15px; margin:14px 0 0;}
+  .callout.warn{background:var(--warn-bg);}
+  .callout.info{background:#F3F2EE;}
+  .callout .ct{display:flex; align-items:center; gap:7px; font-size:14px; font-weight:600; margin:0 0 4px;}
+  .callout.warn .ct{color:var(--warn-fg);}
+  .callout .ct svg{width:17px; height:17px; flex:none;}
+  .callout p{font-size:13px; line-height:1.55; margin:0;}
+  .callout.warn p{color:var(--warn-fg);}
+  .callout.info p{color:var(--ink-soft);}
+  .callout.info .ct{color:var(--ink);}
+  .steps-title{font-size:15px; font-weight:600; margin:18px 0 7px;}
+  ol.steps{margin:0; padding-left:20px;}
+  ol.steps li{font-size:13.5px; line-height:1.6; color:var(--ink-soft); margin:5px 0;}
+  .lead-box{border-top:1px solid var(--line); margin-top:20px; padding-top:18px;}
+  .lead-box h3{font-size:16px; font-weight:600; margin:0 0 4px;}
+  .lead-box .p{font-size:13.5px; color:var(--ink-soft); margin:0 0 13px; line-height:1.5;}
+  label.field{display:block; font-size:13px; color:var(--ink-soft); margin:0 0 5px;}
+  input[type=text], input[type=email]{
+    width:100%; padding:11px 13px; font-size:15px; font-family:inherit; color:var(--ink);
+    background:var(--surface); border:1px solid var(--line); border-radius:var(--radius-sm); margin-bottom:11px;
+  }
+  input:focus, .opt:focus-visible, .cta:focus-visible, button:focus-visible{outline:2px solid var(--brand); outline-offset:2px;}
+  .platforms{display:flex; flex-wrap:wrap; gap:7px 16px; margin:0 0 13px;}
+  .platforms label{display:flex; align-items:center; gap:6px; font-size:13.5px; color:var(--ink); cursor:pointer;}
+  .consent{display:flex; align-items:flex-start; gap:8px; font-size:12.5px; color:var(--ink-soft); line-height:1.45; margin:0 0 13px;}
+  .consent input{margin-top:3px;}
+  .consent a{color:var(--brand);}
+  .err{color:#B33; font-size:12.5px; margin:-4px 0 10px; display:none;}
+  .success{text-align:center; padding:20px 0;}
+  .success svg{width:34px; height:34px; stroke:var(--privat-fg);}
+  .success h3{font-size:16px; margin:10px 0 2px;}
+  .success p{font-size:13.5px; color:var(--ink-soft); margin:0; line-height:1.5;}
+  .restart{margin-top:14px;}
+  .disclaimer{font-size:11.5px; color:var(--ink-faint); line-height:1.55; border-top:1px solid var(--line); padding-top:12px; margin:18px 0 0;}
+  footer{max-width:640px; margin:0 auto; padding:0 20px 40px; font-size:12px; color:var(--ink-faint);}
+  footer a{color:var(--ink-soft);}
+  @media (max-width:480px){ h1{font-size:28px;} .wrap{padding:24px 16px 44px;} .card{padding:20px 17px;} }
+  @media (prefers-reduced-motion:reduce){ *{transition:none !important;} }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <p class="eyebrow">Vinted &middot; eBay &middot; Kleinanzeigen</p>
+  <h1>Bin ich privat &ndash; oder schon gewerblich?</h1>
+  <p class="lede">Du verkaufst online und bekommst langsam ein mulmiges Gef&uuml;hl wegen dem Finanzamt? In <strong>2 Minuten</strong> wei&szlig;t du, wo du stehst &ndash; und was du konkret tun solltest. Sechs Fragen, ein klares Ergebnis.</p>
+
+  <section class="card" aria-live="polite">
+    <div class="card-head">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 8l7-4 7 4M4 8l3 7H1zM17 15l3-7M23 15h-6"/></svg>
+      </span>
+      <span class="card-title">Bin ich gewerblich?</span>
+    </div>
+    <p id="sub">In 2 Minuten Klarheit &middot; Orientierung, keine Steuerberatung</p>
+    <div id="content"></div>
+    <p class="disclaimer">Kein fester Grenzwert &ndash; das Finanzamt entscheidet immer nach dem Gesamtbild. Diese Einsch&auml;tzung ist eine Orientierung und ersetzt keine steuerliche Beratung.</p>
+  </section>
+</main>
+
+<footer>
+  <!-- TODO: In Deutschland Pflicht. Vor Veroeffentlichung ausfuellen. -->
+  <a href="/impressum.html">Impressum</a> &middot; <a href="/datenschutz.html">Datenschutzerkl&auml;rung</a>
+</footer>
+
+<script>
+(function(){
+  // === Konfiguration =======================================================
+  // TODO: Endpoint deines Formular-/Newsletter-Dienstes eintragen
+  // (z.B. Brevo, MailerLite, Formspree). Solange leer -> Vorschaumodus.
+  var FORM_ENDPOINT = "";
+
+  var c = document.getElementById('content');
+  var sub = document.getElementById('sub');
+
+  var SVG = {
+    back:'<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>',
+    refresh:'<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.6-6.4M21 3v6h-6"/></svg>',
+    warn:'<svg viewBox="0 0 24 24" fill="none" stroke="#94640F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>',
+    info:'<svg viewBox="0 0 24 24" fill="none" stroke="#566169" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 16v-4M12 8h.01"/></svg>',
+    mail:'<svg viewBox="0 0 24 24" fill="none" stroke="#1F6B47" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 7 12 13 2 7"/><rect x="2" y="5" width="20" height="14" rx="2"/><path d="m16 16 2 2 4-4"/></svg>'
+  };
+
+  var Q = [
+    {q:"Was verkaufst du haupts\u00e4chlich?", a:[
+      {t:"Nur eigene gebrauchte Sachen", s:"Ausmisten \u2013 Kleidung, M\u00f6bel, Technik aus deinem Besitz", v:0},
+      {t:"Auch gezielt eingekaufte Ware zum Weiterverkauf", s:"z.B. auf dem Flohmarkt, im Gro\u00dfhandel oder online gekauft, um es weiterzuverkaufen", v:1},
+      {t:"Selbst hergestellte Artikel", s:"Dinge, die du anfertigst und verkaufst", v:2}
+    ]},
+    {q:"Mit welcher Absicht verkaufst du?", a:[
+      {t:"Nur Platz schaffen, kein Gewinnziel", v:0},
+      {t:"Ich will damit Geld verdienen", v:1}
+    ]},
+    {q:"Wie regelm\u00e4\u00dfig verkaufst du?", a:[
+      {t:"Nur gelegentlich", v:0},
+      {t:"Laufend \u00fcbers Jahr", v:1},
+      {t:"Dauerhaft, als feste Einnahmequelle", v:2}
+    ]},
+    {q:"Verk\u00e4ufe bzw. Umsatz pro Jahr (pro Plattform)?", a:[
+      {t:"Unter 30 Verk\u00e4ufe und unter 2.000 \u20ac", v:0},
+      {t:"30+ Verk\u00e4ufe oder 2.000 \u20ac+", v:1}
+    ]},
+    {q:"Gehst du planm\u00e4\u00dfig vor?", a:[
+      {t:"Nein", v:0},
+      {t:"Ja", s:"gezielter Einkauf, Preise beobachten, Inserate optimieren, Lager", v:1}
+    ]},
+    {q:"Trittst du wie ein H\u00e4ndler auf?", a:[
+      {t:"Nein", v:0},
+      {t:"Ja", s:"viele gleichartige oder neue Artikel, Shopname, Logo", v:1}
+    ]}
+  ];
+
+  var step = -1, ans = [];
+
+  function el(html){ var d=document.createElement('div'); d.innerHTML=html.trim(); return d.firstChild; }
+
+  function reasonList(title, items, cls){
+    if(!items.length) return "";
+    return '<p class="reasons-title '+cls+'">'+title+'</p><ul class="reasons '+cls+'">'+
+      items.map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul>';
+  }
+
+  function intro(){
+    sub.textContent = "In 2 Minuten Klarheit \u00b7 Orientierung, keine Steuerberatung";
+    c.innerHTML =
+      '<p class="intro-p">Sechs kurze Fragen. Am Ende siehst du deine Tendenz, warum das so ist \u2013 und was du konkret tun solltest.</p>'+
+      '<button class="cta" id="startBtn">Los geht\u2019s</button>';
+    document.getElementById('startBtn').onclick = function(){ step=0; ans=[]; render(); };
+  }
+
+  function render(){
+    sub.textContent = "Frage "+(step+1)+" von "+Q.length;
+    var item = Q[step];
+    c.innerHTML = '<p class="q">'+item.q+'</p>';
+    item.a.forEach(function(opt){
+      var b = el('<button class="opt">'+opt.t+(opt.s?'<small>'+opt.s+'</small>':'')+'</button>');
+      b.onclick = function(){ ans[step]=opt.v; if(step<Q.length-1){step++;render();}else{result();} };
+      c.appendChild(b);
+    });
+    if(step>0){
+      var back = el('<button class="ghost">'+SVG.back+'Zur\u00fcck</button>');
+      back.onclick = function(){ step--; render(); };
+      c.appendChild(back);
+    }
+  }
+
+  function result(){
+    sub.textContent = "Deine Tendenz";
+    var eigengut=ans[0]===0, einkaufOrMade=ans[0]>=1, gewinn=ans[1]===1, dauerhaft=ans[2]===2, dac7=ans[3]===1;
+    var planmaessig=ans[4]===1, auftritt=ans[5]===1, businessLook=planmaessig&&auftritt&&dauerhaft;
+
+    var rP=[], rG=[];
+    if(ans[0]===0) rP.push("Du verkaufst nur eigene gebrauchte Sachen");
+    if(ans[0]===1) rG.push("Du kaufst gezielt zum Weiterverkauf ein");
+    if(ans[0]===2) rG.push("Du verkaufst selbst hergestellte Artikel");
+    if(ans[1]===0) rP.push("Keine Gewinnabsicht"); else rG.push("Du willst Gewinn machen");
+    if(ans[2]===0) rP.push("Nur gelegentliche Verk\u00e4ufe");
+    if(ans[2]===1) rG.push("Laufende Verk\u00e4ufe \u00fcbers Jahr");
+    if(ans[2]===2) rG.push("Dauerhaft als Einnahmequelle");
+    if(planmaessig) rG.push("Planm\u00e4\u00dfiges Vorgehen");
+    if(auftritt) rG.push("H\u00e4ndler-\u00e4hnlicher Au\u00dfenauftritt");
+
+    var key;
+    if(eigengut){ key=(businessLook&&gewinn)?"grauzone":"privat"; }
+    else { key=gewinn?"gewerblich":"grauzone"; }
+
+    var head, body, why, stepItems, extra="";
+    if(key==="privat"){
+      head="Eher privat";
+      body="Du verkaufst eigene gebrauchte Sachen \u2013 das ist in der Regel steuerfrei und kein Gewerbe, auch bei Gewinn oder Regelm\u00e4\u00dfigkeit, solange du keine Ware zukaufst.";
+      why=reasonList("Das spricht bei dir f\u00fcr privat:", rP, "p");
+      stepItems=[
+        "Keine Gewerbeanmeldung n\u00f6tig.",
+        "Verkauf eigener Gebrauchsgegenst\u00e4nde (Kleidung, M\u00f6bel, Technik) ist steuerfrei \u2013 nichts anzugeben.",
+        "Ausnahme: Wertgegenst\u00e4nde (Schmuck, Sammlerst\u00fccke, Krypto) mit Gewinn innerhalb eines Jahres und \u00fcber 1.000 \u20ac/Jahr \u2192 in der Steuererkl\u00e4rung (Anlage SO) angeben.",
+        "Eine DAC7-Meldung ist nur Information ans Finanzamt, keine Steuer."
+      ];
+    } else if(key==="gewerblich"){
+      head="Eher gewerblich";
+      body="Einkauf bzw. Herstellung mit Gewinnabsicht ist der Kern eines Gewerbes (\u00a715 EStG) \u2013 unabh\u00e4ngig von der St\u00fcckzahl.";
+      why=reasonList("Das spricht bei dir f\u00fcr ein Gewerbe:", rG, "g");
+      if(!dac7){
+        extra += '<p class="mini-note">Hinweis: Auch unter 30 Verk\u00e4ufen / 2.000 \u20ac kannst du gewerblich sein \u2013 diese Grenze betrifft nur die DAC7-Meldung, nicht deine Einstufung.</p>';
+      }
+      extra += '<div class="callout warn"><div class="ct">'+SVG.warn+'Auch ohne Steuer bleibt die Pflicht</div>'+
+        '<p>Bei kleinen Gewinnen f\u00e4llt oft keine Einkommensteuer an (H\u00e4rteausgleich bis 410 \u20ac). Die Gewerbeanmeldung und die Pflicht, die Eink\u00fcnfte in der Steuererkl\u00e4rung anzugeben, entfallen dadurch aber nicht.</p></div>';
+      stepItems=[
+        "Gewerbe beim Gewerbeamt anmelden (meist 20\u201360 \u20ac).",
+        "Fragebogen zur steuerlichen Erfassung \u00fcber ELSTER ausf\u00fcllen.",
+        "Kleinunternehmer \u00a719 w\u00e4hlen (keine Umsatzsteuer), wenn der Umsatz im Vorjahr \u2264 25.000 \u20ac und im laufenden Jahr \u2264 100.000 \u20ac bleibt.",
+        "Gewinn per E\u00dcR ermitteln und in der Steuererkl\u00e4rung (Anlage G + E\u00dcR) angeben.",
+        "Gewerbesteuer f\u00e4llt erst ab 24.500 \u20ac Gewinn an.",
+        "Im Zweifel: Steuerberater einbinden."
+      ];
+    } else {
+      head="Grauzone \u2013 im Einzelfall pr\u00fcfen";
+      body = eigengut
+        ? "Du gibst \u201eeigene Sachen\u201c an, trittst aber mit Gewinnabsicht wie ein H\u00e4ndler auf. Wenn du in Wahrheit Ware zukaufst, bist du gewerblich \u2013 die Herkunft der Artikel ist hier entscheidend."
+        : "Du kaufst oder produzierst zum Weiterverkauf, aber ohne klare Gewinnabsicht. Das ist ein Grenzfall, den das Finanzamt nach dem Gesamtbild beurteilt.";
+      why=reasonList("Eher privat:", rP, "p")+reasonList("Eher gewerblich:", rG, "g");
+      stepItems=[
+        "Dokumentiere Herkunft sowie Ein- und Verkaufspreise deiner Artikel.",
+        "Sobald du gezielt zukaufst und Gewinn anstrebst, ist es ein Gewerbe.",
+        "Lass deinen Fall von einem Steuerberater einordnen, bevor das Finanzamt es tut."
+      ];
+    }
+
+    if(dac7){
+      extra += '<div class="callout info"><div class="ct">'+SVG.info+'Getrennt davon: DAC7-Meldung</div>'+
+        '<p>Ab 30 Verk\u00e4ufen oder 2.000 \u20ac meldet die Plattform deine Daten ans Finanzamt \u2013 das ist keine neue Steuer und kein Beleg daf\u00fcr, dass du gewerblich bist.</p></div>';
+    }
+
+    var stepsHtml = '<p class="steps-title">Deine n\u00e4chsten Schritte</p><ol class="steps">'+
+      stepItems.map(function(x){return '<li>'+x+'</li>';}).join('')+'</ol>';
+
+    c.innerHTML =
+      '<span class="badge '+key+'">'+head+'</span>'+
+      '<p class="result-body">'+body+'</p>'+
+      why + extra + stepsHtml +
+      '<div class="lead-box" id="leadBox">'+
+        '<h3>Ergebnis + Checkliste per Mail?</h3>'+
+        '<p class="p">Wir schicken dir deine Einsch\u00e4tzung und die n\u00e4chsten Schritte \u2013 und sagen Bescheid, wenn das Tool startet, das deine Verk\u00e4ufe automatisch verfolgt.</p>'+
+        '<input type="text" id="vorname" placeholder="Vorname (optional)" autocomplete="given-name" />'+
+        '<input type="email" id="email" placeholder="E-Mail-Adresse" autocomplete="email" required />'+
+        '<p class="err" id="emailErr">Bitte gib eine g\u00fcltige E-Mail-Adresse ein.</p>'+
+        '<label class="field">Wo verkaufst du? (optional)</label>'+
+        '<div class="platforms">'+
+          ['Vinted','eBay','Kleinanzeigen','Etsy','Andere'].map(function(x){
+            return '<label><input type="checkbox" name="plat" value="'+x+'"> '+x+'</label>';}).join('')+
+        '</div>'+
+        '<label class="consent"><input type="checkbox" id="consent"> <span>Ich m\u00f6chte die Checkliste erhalten und akzeptiere die <a href="/datenschutz.html">Datenschutzerkl\u00e4rung</a>.</span></label>'+
+        '<p class="err" id="consentErr">Bitte best\u00e4tige die Einwilligung.</p>'+
+        '<button class="cta" id="sendBtn">Schick mir meine Checkliste</button>'+
+      '</div>'+
+      '<button class="ghost restart" id="restartBtn">'+SVG.refresh+'Test wiederholen</button>';
+
+    document.getElementById('sendBtn').onclick = function(){ submitLead(key); };
+    document.getElementById('restartBtn').onclick = function(){ step=-1; intro(); };
+  }
+
+  function submitLead(resultKey){
+    var email = document.getElementById('email').value.trim();
+    var consent = document.getElementById('consent').checked;
+    var emailErr = document.getElementById('emailErr');
+    var consentErr = document.getElementById('consentErr');
+    var ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    emailErr.style.display = ok ? 'none' : 'block';
+    consentErr.style.display = consent ? 'none' : 'block';
+    if(!ok || !consent) return;
+
+    var plats = Array.prototype.slice.call(document.querySelectorAll('input[name=plat]:checked')).map(function(i){return i.value;});
+    var payload = {
+      email: email,
+      vorname: document.getElementById('vorname').value.trim(),
+      plattformen: plats,
+      ergebnis: resultKey,
+      antworten: ans
+    };
+
+    if(!FORM_ENDPOINT){ showSuccess(); return; } // Vorschaumodus
+    fetch(FORM_ENDPOINT, {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload)})
+      .then(function(){ showSuccess(); })
+      .catch(function(){ showSuccess(); });
+  }
+
+  function showSuccess(){
+    document.getElementById('leadBox').innerHTML =
+      '<div class="success">'+SVG.mail+
+      '<h3>Fast geschafft!</h3>'+
+      '<p>Best\u00e4tige kurz die Mail in deinem Postfach (Double-Opt-in), dann ist die Checkliste unterwegs.</p></div>';
+  }
+
+  intro();
+})();
+</script>
+</body>
+</html>
