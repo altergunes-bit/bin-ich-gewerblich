@@ -154,7 +154,7 @@
   // === Konfiguration =======================================================
   // TODO: Endpoint deines Formular-/Newsletter-Dienstes eintragen
   // (z.B. Brevo, MailerLite, Formspree). Solange leer -> Vorschaumodus.
-  var FORM_ENDPOINT = "";
+  var FORM_ENDPOINT = "/api/subscribe";
 
   var c = document.getElementById('content');
   var sub = document.getElementById('sub');
@@ -359,5 +359,9 @@
   intro();
 })();
 </script>
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
